@@ -1,4 +1,5 @@
 <!--index.wxml-->
-<view class="container">
-  首页
+<view class="top">
+  <input type="text" placeholder="搜索"></input>
 </view>
+<view class="iconfont iconweixin"></view>

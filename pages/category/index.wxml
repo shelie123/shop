@@ -2,3 +2,22 @@
 <view>
   <search />
 </view>
+
+<view class="container">
+  <view class="content-left">
+    <view wx:for="{{list}}" wx:key="{{index}}" bindtap="hangdleChange" data-index="{{index}}" class="item {{current===index? 'active':''}}">
+      {{item.cat_name}}
+    </view>
+  </view>
+  <view class="content-right">
+    <view wx:for="{{list[current].children}}" wx:key="{{index}}">
+      <view class="details">{{item.cat_name}}</view>
+      <view class="product-list">
+        <navigator url="" wx:for="{{item.children}}" wx:key="{{index}}">
+          <image src="{{item.cat_icon}}"></image>
+          <view>{{item.cat_name}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

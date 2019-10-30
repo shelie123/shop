@@ -12,7 +12,7 @@ App({
 
     // 监听错误的请求
     request.onError(res => {
-      console.log(`拦截错误：`, res)
+      // console.log(`拦截错误：`, res)
 
       if (res.statusCode === 404) {
         wx.showToast({

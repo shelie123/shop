@@ -1,24 +1,64 @@
 <!--index.wxml-->
-<view class="top">
-  <input type="text" placeholder="搜索" class="Search"></input>
-  <view class="iconfont iconsearch"></view>
-</view>
-<view class="container">
-  <view class="page-body">
-    <view class="page-section page-section-spacing swiper">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{message}}" wx:key="{{index}}">
-          <swiper-item>
-            <image src="{{item.image_src}}" />
-          </swiper-item>
-        </block>
-      </swiper>
+<view class="content">
+  <view class="top">
+    <input type="text" placeholder="搜索" class="Search"></input>
+    <view class="iconfont iconsearch"></view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="container">
+    <view class="page-body">
+      <view class="page-section page-section-spacing swiper">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{message}}" wx:key="{{index}}">
+            <swiper-item>
+              <image src="{{item.image_src}}" mode="aspectFill" class="page-image" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </view>
+  <!-- 商品导航 -->
+  <view class="banners">
+    <view wx:for="{{menus}}" wx:key="{{index}}">
+      <navigator url="{{item.navigator_url}}" class="classify">
+        <image src="{{item.image_src}}"></image>
+      </navigator>
+    </view>
+  </view>
+  <view>
+    <navigator url="" class="fashion">
+      <!-- <image src=""></ima ge> -->
+      时尚女装
+    </navigator>
+  </view>
+  <view class="floors">
+    <view class="floors-left">
+      <navigator url="">
+        <image src=""></image>
+      </navigator>
+    </view>
+    <view class="floors-right">
+      <view class="image">
+        <navigator url="">
+          <image src=""></image>
+        </navigator>
+      </view>
+      <view class="image">
+        <navigator url="">
+          <image src=""></image>
+        </navigator>
+      </view>
+      <view class="image">
+        <navigator url="">
+          <image src=""></image>
+        </navigator>
+      </view>
+      <view class="image">
+        <navigator url="">
+          <image src=""></image>
+        </navigator>
+      </view>
     </view>
   </view>
 </view>
-<!-- <view class="navigation">
-  <view></view>
-  <view></view>
-  <view></view>
-  <view></view>
-</view> -->

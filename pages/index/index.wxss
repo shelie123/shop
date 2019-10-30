@@ -1,5 +1,9 @@
 /**index.wxss**/
 
+.content {
+  box-sizing: border-box;
+}
+
 .top {
   position: relative;
   height: 80rpx;
@@ -23,11 +27,62 @@
   left: 42%;
 }
 
-.image {
-  object-fit: cover;
+.page-image {
+  width: 100%;
+  height: 100%;
 }
 
-.navigation {
+.banners {
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.banners navigator image {
+  width: 128rpx;
+  height: 140rpx;
+  padding-bottom: 5px;
+}
+
+.banners navigator view {
+  font-size: 14px;
+}
+
+.banners .classify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fashion {
+  height: 90rpx;
+  background: #f4f4f4;
+  line-height: 90rpx;
+  color: #ef8295;
+  padding-left: 20px;
+}
+
+.floors {
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 10px;
+}
+
+.floors .floors-left {
+  width: 230rpx;
+  height: 380rpx;
+  background: #ddd;
+}
+
+.floors .floors-right {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.floors .floors-right .image {
+  margin: 0 0 5px 3px;
+  width: 220rpx;
   height: 190rpx;
   background: #ddd;
 }

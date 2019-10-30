@@ -26,38 +26,24 @@
       </navigator>
     </view>
   </view>
-  <view>
-    <navigator url="" class="fashion">
-      <!-- <image src=""></ima ge> -->
-      时尚女装
-    </navigator>
-  </view>
-  <view class="floors">
-    <view class="floors-left">
-      <navigator url="">
-        <image src=""></image>
+  <view wx:for="{{floors}}" wx:key="{{index}}">
+    <view>
+      <navigator url="" class="fashion">
+        <image src="{{item.floor_title.image_src}}"></image>
       </navigator>
     </view>
-    <view class="floors-right">
-      <view class="image">
+    <view class="floors">
+      <view class="floors-left">
         <navigator url="">
-          <image src=""></image>
+          <image src="{{item.product_list[0].image_src}}"></image>
         </navigator>
       </view>
-      <view class="image">
-        <navigator url="">
-          <image src=""></image>
-        </navigator>
-      </view>
-      <view class="image">
-        <navigator url="">
-          <image src=""></image>
-        </navigator>
-      </view>
-      <view class="image">
-        <navigator url="">
-          <image src=""></image>
-        </navigator>
+      <view class="floors-right">
+        <view class="image">
+          <navigator url="" wx:for="{{item.product_list}}" wx:key="{{index}}" wx:if="{{index>0}}">
+            <image src="{{item.image_src}}"></image>
+          </navigator>
+        </view>
       </view>
     </view>
   </view>

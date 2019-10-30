@@ -59,7 +59,11 @@
   background: #f4f4f4;
   line-height: 90rpx;
   color: #ef8295;
-  padding-left: 20px;
+  padding: 10px 10px;
+}
+
+.fashion image {
+  height: 90rpx;
 }
 
 .floors {
@@ -69,9 +73,14 @@
 }
 
 .floors .floors-left {
-  width: 230rpx;
-  height: 380rpx;
+  width: 232rpx;
+  height: 386rpx;
   background: #ddd;
+}
+
+.floors .floors-left image {
+  width: 232rpx;
+  height: 386rpx;
 }
 
 .floors .floors-right {
@@ -81,8 +90,12 @@
 }
 
 .floors .floors-right .image {
-  margin: 0 0 5px 3px;
-  width: 220rpx;
-  height: 190rpx;
-  background: #ddd;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.floors .floors-right .image  image {
+  padding-left: 2px;
+  width: 233rpx;
+  height: 188rpx;
 }

@@ -53,7 +53,12 @@ Page({
     request({
       url: "/api/public/v1/home/floordata"
     }).then(res => {
-      console.log(res.data)
+      const {
+        message
+      } = res.data
+      this.setData({
+        floors: message
+      })
     })
 
 

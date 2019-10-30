@@ -1,1 +1,33 @@
 /**index.wxss**/
+
+.top {
+  position: relative;
+  height: 80rpx;
+  padding: 20rpx 16rpx;
+  background: #ff2d4a;
+}
+
+.Search {
+  background: #fff;
+  height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #bbb;
+  border-radius: 3px;
+}
+
+.iconsearch {
+  position: absolute;
+  font-size: 30rpx;
+  top: 30%;
+  left: 42%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.navigation {
+  height: 190rpx;
+  background: #ddd;
+}

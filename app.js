@@ -8,7 +8,7 @@ App({
     //初始化
 
     // 设置默认的基准路径
-    request.defaults.baseURL = "https://api.github.com"
+    request.defaults.baseURL = "https://api.zbztb.cn"
 
     // 监听错误的请求
     request.onError(res => {

@@ -1,9 +1,7 @@
 /**
  * 
  * @desc
- * 
  * @param  请求对象 | Object
- * 
  * @return  promise
  * 
  */

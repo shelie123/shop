@@ -1,9 +1,6 @@
 <!--index.wxml-->
 <view class="content">
-  <view class="top">
-    <input type="text" placeholder="搜索" class="Search"></input>
-    <view class="iconfont iconsearch"></view>
-  </view>
+  <search />
   <!-- 轮播图 -->
   <view class="container">
     <view class="page-body">

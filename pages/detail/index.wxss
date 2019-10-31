@@ -1,0 +1,105 @@
+/* pages/detail/index.wxss */
+
+.container {
+  box-sizing: border-box;
+}
+
+.container .banners {
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 0 20px; */
+}
+
+.container .banners image {
+  width: 100%;
+}
+
+.price {
+  font-size: 24px;
+  color: #ff2d4a;
+  padding: 10px 10px;
+}
+
+.content {
+  display: flex;
+}
+
+.content .content-left {
+  box-sizing: border-box;
+  padding: 0 30px 0 10px;
+  justify-content: center;
+  flex: 9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.content .content-right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px #ddd solid;
+  color: #9b9a9b;
+}
+
+.iconshoucang {
+  padding-bottom: 5px;
+}
+
+.shoucang {
+  font-size: 14px;
+}
+
+.express {
+  padding: 10px;
+  color: #a3a2a3;
+  font-size: 12px;
+}
+
+.sales {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.sales .sales-top {
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px;
+}
+
+.sales .sales-top .left {
+  font-size: 18px;
+}
+
+.sales .sales-top .right {
+  padding-left: 30px;
+  color: #ff2d4a;
+}
+
+.sales .sales-bottom {
+  display: flex;
+}
+
+.sales .sales-bottom .cart {
+  width: 215rpx;
+  height: 100rpx;
+  background: #f4b73f;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 14px;
+}
+
+.sales .sales-bottom .by {
+  width: 215rpx;
+  height: 100rpx;
+  background: #eb4450;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 14px;
+}

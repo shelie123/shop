@@ -1,0 +1,27 @@
+<!--pages/list/index.wxml-->
+<view class="container">
+  <view class="search">
+    <icon type="search" size="16"></icon>
+    <view class="sousuo">{{query}}</view>
+  </view>
+
+  <view class="content">
+    <view class="bar">
+      <view>综合</view>
+      <view>销量</view>
+      <view>价格</view>
+    </view>
+    <navigator url="" wx:for="{{goods}}" wx:key="{{index}}">
+      <view class="major">
+        <view class="major-left">
+          <image src="{{item.goods_small_logo}}">
+          </image>
+        </view>
+        <view class="major-right">
+          <view class="matter">{{item.goods_name}}</view>
+          <view class="price">￥{{item.goods_price}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

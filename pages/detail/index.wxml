@@ -1,30 +1,47 @@
 <!--pages/detail/index.wxml-->
 <view class="container">
   <view class="banners">
-    <navigator url="">
-      <image src="https://img10.360buyimg.com/pop/s590x470_jfs/t1/98397/32/156/82253/5da83620E145e1861/a1dc38ea3bf46207.jpg.webp"></image>
-    </navigator>
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{details.pics}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item.pics_big}}" mode="aspectFill"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
   </view>
-  <view class="price">￥279</view>
+  <view class="price">￥{{details.goods_price}}</view>
   <view class="content">
     <view class="content-left">
-      初语2019秋装新款潮牌女装加绒宽松BF风慵懒卫衣女套头连帽上衣
+      {{details.goods_name}}
     </view>
     <view class="content-right">
-      <view class="iconfont iconshoucang"></view>
+      <view class="iconfont icon-shoucang"></view>
       <view class="shoucang">收藏</view>
     </view>
   </view>
   <view class="express">快递：免运费</view>
 
+  <!-- 商品详情，nodes相当于v-html的作用 -->
+  <rich-text nodes="{{details.goods_introduce}}" class="rich-text"></rich-text>
+
   <view class="sales">
-    <view class="sales-top">
+    <!-- <view class="sales-top">
       <view class="left">促销</view>
       <view class="right"> 满300减30元</view>
-    </view>
+    </view> -->
     <view class="sales-bottom">
-      <view class="cart">加入购物车</view>
-      <view class="by">立即购买</view>
+    <button class="contact" open-type="contact" type="primary">打开微信原生客服回话</button>
+      <view class="kefu">
+        <view class="iconfont icon-kefu"></view>
+        <view>联系客服</view>
+      </view>
+      <view class="gouwuche">
+        <view class="iconfont icon-gouwuche"></view>
+        <view>购物车</view>
+      </view>
+
       <view class="cart">加入购物车</view>
       <view class="by">立即购买</view>
     </view>

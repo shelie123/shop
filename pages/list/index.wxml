@@ -7,11 +7,11 @@
 
   <view class="content">
     <view class="bar">
-      <view>综合</view>
+      <view class="active">综合</view>
       <view>销量</view>
       <view>价格</view>
     </view>
-    <navigator url="" wx:for="{{goods}}" wx:key="{{index}}">
+    <navigator url="/pages/detail/index?goods_id={{item.goods_id}}" wx:for="{{goods}}" wx:key="{{index}}">
       <view class="major">
         <view class="major-left">
           <image src="{{item.goods_small_logo}}">
@@ -23,5 +23,8 @@
         </view>
       </view>
     </navigator>
+    <!-- 加载中提示，也可能是加载完毕 -->
+    <view class="loading" wx:if="{{hasMore}}">正在加载...</view>
+    <view class="loading" wx:if="{{!hasMore}}">已经到最底部了</view>
   </view>
 </view>

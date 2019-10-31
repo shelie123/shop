@@ -41,6 +41,10 @@ page {
   border-bottom: 1px #ddd solid;
 }
 
+.content .bar .active {
+  color: red;
+}
+
 .major {
   display: flex;
   padding: 10px 0;
@@ -77,4 +81,11 @@ page {
   font-size: 18px;
   color: red;
   font-weight: 900;
+}
+
+.loading {
+  padding: 20rpx;
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
 }

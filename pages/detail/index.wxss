@@ -64,8 +64,8 @@
   font-size: 12px;
 }
 
-.rich-text {
-  margin-bottom: 200px;
+.particulars {
+  margin-bottom: 150rpx;
 }
 
 .sales {

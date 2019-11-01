@@ -1,0 +1,26 @@
+<!--pages/search/index.wxml-->
+<view class="container">
+  <view class="search">
+    <view class="search-left">
+      <icon type="search" size="14"></icon>
+      <input placeholder="请输入你想要的商品" ></input>
+    </view>
+    <view class="search-right">
+      取消
+    </view>
+  </view>
+
+  <view class="banners">
+    <view>历史搜索</view>
+    <icon type="clear" size="16"></icon>
+  </view>
+
+  <view class="content">
+    <view>小米</view>
+    <view>小米hhaha</view>
+    <view>小米heh</view>
+    <view>小米jsjsjs</view>
+    <view>小米s</view>
+    <view>小米asda</view>
+  </view>
+</view>

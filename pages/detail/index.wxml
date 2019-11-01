@@ -23,16 +23,17 @@
   </view>
   <view class="express">快递：免运费</view>
 
-  <!-- 商品详情，nodes相当于v-html的作用 -->
-  <rich-text nodes="{{details.goods_introduce}}" class="rich-text"></rich-text>
-
+  <view class="particulars">
+    <!-- 商品详情，nodes相当于v-html的作用 -->
+    <rich-text nodes="{{details.goods_introduce}}" class="rich-text"></rich-text>
+  </view>
   <view class="sales">
-    <!-- <view class="sales-top">
+    <view class="sales-top">
       <view class="left">促销</view>
       <view class="right"> 满300减30元</view>
-    </view> -->
+    </view>
     <view class="sales-bottom">
-    <button class="contact" open-type="contact" type="primary">打开微信原生客服回话</button>
+      <button class="contact" open-type="contact" type="primary">打开微信原生客服回话</button>
       <view class="kefu">
         <view class="iconfont icon-kefu"></view>
         <view>联系客服</view>

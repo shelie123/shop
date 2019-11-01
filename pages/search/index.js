@@ -50,8 +50,15 @@ Page({
     // arr.unshift(value)
     arr.unshift(this.data.showValue)
 
+    // 给数组去重
+    // 如果新数组的当前元素的索引值 == 该元素在原始数组中的第一个索引，则返回当前元素
+    const arr1 = arr.filter((item, index) => {
+      return arr.indexOf(item, 0) === index;
+    });
+
+
     // 保存到本地
-    wx.setStorageSync('search', arr)
+    wx.setStorageSync('search', arr1)
 
     wx.navigateTo({
       url: "/pages/list/index?query=" + this.data.showValue

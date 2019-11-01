@@ -1,2 +1,124 @@
 <!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="container">
+  <view class="address">
+    <view class="address-top">
+      <view>收货人:某某</view>
+      <view class="address-top-right">
+        <view>13800138000</view>
+        <view>></view>
+      </view>
+    </view>
+    <view class="address-bottom">
+      收货地址：广东省广州市天河区
+    </view>
+    <view class="foot">
+      <image src="../../images/cart_border@2x.png"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="top">
+      <view class="iconfont icon-dianpu"></view>
+      <view>优购生活馆</view>
+    </view>
+    <view class="content-list">
+      <icon type="success" size="16"></icon>
+      <view class="list-details">
+        <navigator url="" class="picture">
+          <image src=""></image>
+        </navigator>
+        <view class="list-top">
+          <navigator url="" class="title">
+            JS中的五种去重方法 第一种方法: 第二种方法: 第三种方法: 第四种方法: 第五
+          </navigator>
+          <view class="list-bottom">
+            <view class="price">￥279.00</view>
+            <view class="operation">
+              <view class="reduce">-</view>
+              <input value="1" class="num"></input>
+              <view class="add">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content-list">
+      <icon type="success" size="16"></icon>
+      <view class="list-details">
+        <navigator url="" class="picture">
+          <image src=""></image>
+        </navigator>
+        <view class="list-top">
+          <navigator url="" class="title">
+            JS中的五种去重方法 第一种方法: 第二种方法: 第三种方法: 第四种方法: 第五
+          </navigator>
+          <view class="list-bottom">
+            <view class="price">￥279.00</view>
+            <view class="operation">
+              <view class="reduce">-</view>
+              <input value="1" class="num"></input>
+              <view class="add">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content-list">
+      <icon type="success" size="16"></icon>
+      <view class="list-details">
+        <navigator url="" class="picture">
+          <image src=""></image>
+        </navigator>
+        <view class="list-top">
+          <navigator url="" class="title">
+            JS中的五种去重方法 第一种方法: 第二种方法: 第三种方法: 第四种方法: 第五
+          </navigator>
+          <view class="list-bottom">
+            <view class="price">￥279.00</view>
+            <view class="operation">
+              <view class="reduce">-</view>
+              <input value="1" class="num"></input>
+              <view class="add">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="content-list">
+      <icon type="success" size="16"></icon>
+      <view class="list-details">
+        <navigator url="" class="picture">
+          <image src=""></image>
+        </navigator>
+        <view class="list-top">
+          <navigator url="" class="title">
+            JS中的五种去重方法 第一种方法: 第二种方法: 第三种方法: 第四种方法: 第五
+          </navigator>
+          <view class="list-bottom">
+            <view class="price">￥279.00</view>
+            <view class="operation">
+              <view class="reduce">-</view>
+              <input value="1" class="num"></input>
+              <view class="add">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footed">
+    <view class="all-list">
+      <icon type="success" size="16"></icon>
+      <view>全选</view>
+    </view>
+    <view class="amount">
+      <view class="add-up">合计:
+        <text>￥14110.00</text>
+      </view>
+      <view class="freight">包含运费</view>
+    </view>
+    <view class="settle">
+      结算(3)
+    </view>
+  </view>
+
+</view>

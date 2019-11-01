@@ -3,24 +3,21 @@
   <view class="search">
     <view class="search-left">
       <icon type="search" size="14"></icon>
-      <input placeholder="请输入你想要的商品" ></input>
+      <input placeholder="请输入你想要的商品" value="{{showValue}}" bindinput="handleInput" bindconfirm="handleValue"></input>
     </view>
-    <view class="search-right">
+    <view class="search-right" wx:if="{{valueShow}}" bindtap="handlecancel">
       取消
     </view>
   </view>
 
   <view class="banners">
     <view>历史搜索</view>
-    <icon type="clear" size="16"></icon>
+    <icon type="clear" size="16" bindtap="handleClear"></icon>
   </view>
 
   <view class="content">
-    <view>小米</view>
-    <view>小米hhaha</view>
-    <view>小米heh</view>
-    <view>小米jsjsjs</view>
-    <view>小米s</view>
-    <view>小米asda</view>
+    <navigator wx:for="{{keyword}}" wx:key="{{index}}" url="/pages/list/index?query={{item}}">
+      {{item}}
+    </navigator>
   </view>
 </view>

@@ -44,7 +44,9 @@
       </view>
 
       <view class="cart">加入购物车</view>
-      <view class="by">立即购买</view>
+      <navigator url="/pages/cart/index" class="by" open-type="switchTab" >
+        <view bindtap="handleList">立即购买</view>
+      </navigator>
     </view>
   </view>
 </view>

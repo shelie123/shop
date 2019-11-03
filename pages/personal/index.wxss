@@ -1,1 +1,165 @@
 /* pages/personal/index.wxss */
+
+page {
+  background: #f4f4f4;
+}
+
+.top {
+  height: 360rpx;
+  background: #ff2d4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top .iconchilun {
+  font-size: 20px;
+  color: #fff;
+}
+
+.top .photo {
+  width: 150rpx;
+  height: 150rpx;
+  background: #ddd;
+  margin: 0 50rpx;
+  border-radius: 50%;
+  text-align: center;
+  border: 3px #fff solid;
+}
+
+.top .photo image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.top .photo view {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.top .iconchat-active {
+  font-size: 20px;
+  color: #fff;
+}
+
+.content {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 10px;
+}
+
+.content .banner {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: -10px;
+  left: 0;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-around;
+}
+
+.content .banner .collect, .content .banner .shop, .content .banner .attention,
+.content .banner .footprint {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #787878;
+}
+
+.form {
+  margin: 0 10px;
+  box-sizing: border-box;
+  margin-top: 120rpx;
+}
+
+.formlist {
+  height: 260rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.formlist .formlist-top {
+  height: 90rpx;
+  padding-left: 10px;
+  line-height: 90rpx;
+  border-bottom: 1px #ddd solid;
+  font-size: 14px;
+}
+
+.formlist-bottom {
+  display: flex;
+  height: 170rpx;
+  justify-content: space-around;
+}
+
+.formlist-bottom .list-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.formlist-bottom .list-order .iconfont {
+  padding-bottom: 10rpx;
+  font-size: 24px;
+  color: #eb4450;
+}
+
+.address {
+  margin-top: 10px;
+  height: 90rpx;
+  background: #fff;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serve {
+  margin-top: 10px;
+  background: #fff;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer {
+  display: flex;
+  height: 90rpx;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px #ddd solid;
+}
+
+.customer view:nth-child(2){
+  padding-right: 10px;
+}
+
+
+
+/* .clearfix {
+  overflow: hidden;
+  _zoom: 1;
+} */
+
+/* .clearfix {
+  overflow: auto;
+  _height: 1%;
+} */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

@@ -5,62 +5,74 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    shoplist: {},
+    userInfo: wx.getStorageSync("address") || [],
+    is_show: true,
+    priceAdd: 0
   },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    // 获取地址
+    wx.chooseAddress({
+      success(res) {
+        wx.setStorageSync('address', res)
+      },
+    })
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  handleAdd(e) {
+
+    const index = e.currentTarget.dataset.index;
+    let carts = this.data.shoplist;
+    let num = carts[index].goods_num;
+    let priced = +carts[index].goods_price;
+    num = num + 1;
+    priced += +priced
+    carts[index].goods_num = num;
+    this.setData({
+      shoplist: carts,
+    });
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  handlereduce(e) {
+    const index = e.currentTarget.dataset.index;
+    let carts = this.data.shoplist;
+    let num = carts[index].goods_num;
+    let price = carts[index].goods_price;
+    if (num === 1) {
+      return;
+    }
+    num = num - 1;
+    price = price * num - (price * (num - 1));
+    carts[index].goods_num = num;
+    carts[index].goods_price = price;
+    this.setData({
+      shoplist: carts
+    });
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
+  onShow() {
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    // 获取本地存储的数据
+    var shoplist = wx.getStorageSync("List") || []
+    const {
+      goods_num,
+      is_show,
+      goods_price
+    } = shoplist;
+    this.setData({
+      shoplist,
+      goods_num,
+      is_show,
+      priced: goods_price
+    })
   }
 })

@@ -1,2 +1,82 @@
 <!--pages/personal/index.wxml-->
-<text>pages/personal/index.wxml</text>
+<view class="container">
+  <view class="top">
+    <view class="iconfont iconchilun"></view>
+    <view class="photo">
+      <navigator url="">
+        <image src="../../images/touxiang1.png"></image>
+        <view>
+          登录/注册
+        </view>
+      </navigator>
+    </view>
+    <view class="iconfont iconchat-active"></view>
+  </view>
+  <view class="content clearfix">
+    <view class="banner">
+      <view class="collect">
+        <view>0</view>
+        <view>收藏的店铺</view>
+      </view>
+      <view class="shop">
+        <view>0</view>
+        <view>收藏的商品</view>
+      </view>
+      <view class="attention">
+        <view>0</view>
+        <view>关注的商品</view>
+      </view>
+      <view class="footprint">
+        <view>0</view>
+        <view>我的足迹</view>
+      </view>
+    </view>
+  </view>
+  <view class="form">
+    <view class="formlist">
+      <view class="formlist-top">
+        我的订单
+      </view>
+      <view class="formlist-bottom">
+        <view class="list-order">
+          <view class="iconfont icon-daifukuan"></view>
+          <view>待付款</view>
+        </view>
+        <view class="list-order">
+          <view class="iconfont icon-icon3"></view>
+          <view>待收货</view>
+        </view>
+        <view class="list-order">
+          <view class="iconfont icon-icon5"></view>
+          <view>退款/退货</view>
+        </view>
+        <view class="list-order">
+          <view class="iconfont icon-icon_order"></view>
+          <view>全部订单</view>
+        </view>
+      </view>
+    </view>
+    <view class="address">
+      <view>收货地址管理</view>
+      <view class="iconfont iconarrow-right"></view>
+    </view>
+    <view class="serve">
+      <view class="customer">
+        <view>联系客服</view>
+        <view>400-618-4000</view>
+      </view>
+      <view class="customer">
+        <view>意见反馈</view>
+        <view class="iconfont iconarrow-right"></view>
+      </view>
+      <view class="customer">
+        <view>联系客服</view>
+        <view>400-618-4000</view>
+      </view>
+      <view class="customer">
+        <view>联系客服</view>
+        <view>400-618-4000</view>
+      </view>
+    </view>
+  </view>
+</view>

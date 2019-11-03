@@ -42,9 +42,10 @@
         <view class="iconfont icon-gouwuche"></view>
         <view>购物车</view>
       </view>
-
-      <view class="cart">加入购物车</view>
-      <navigator url="/pages/cart/index" class="by" open-type="switchTab" >
+      <navigator url="/pages/cart/index" class="cart" open-type="switchTab">
+        <view bindtap="handleList">加入购物车</view>
+      </navigator>
+      <navigator url="/pages/cart/index" class="by" open-type="switchTab">
         <view bindtap="handleList">立即购买</view>
       </navigator>
     </view>

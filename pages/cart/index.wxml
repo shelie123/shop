@@ -20,8 +20,8 @@
       <view class="iconfont icon-dianpu"></view>
       <view>优购生活馆</view>
     </view>
-    <view class="content-list" wx:for="{{shoplist}}" wx:key="{{index}}">
-      <icon type="success" size="16" class="red"></icon>
+    <view class="content-list" wx:for="{{goods}}" wx:key="{{index}}">
+      <icon type="success" size="16" color="{{item.selected?'red':'gray'}}" bindtap="handleSelected" data-id="{{item.goods_id}}"></icon>
       <view class="list-details">
         <navigator url="" class="picture">
           <image src="{{item.goods_small_logo}}"></image>
@@ -31,11 +31,11 @@
             {{item.goods_name}}
           </navigator>
           <view class="list-bottom">
-            <view class="price">￥{{item.goods_price*item.goods_num}}</view>
+            <view class="price">￥{{item.goods_price*item.goods_number}}</view>
             <view class="operation">
-              <view class="reduce" bindtap="handlereduce" data-index="{{index}}">-</view>
-              <input value="{{item.goods_num}}" class="num"></input>
-              <view class="add" bindtap="handleAdd" data-index="{{index}}">+</view>
+              <view class="reduce" bindtap="handlereduce" data-id="{{item.goods_id}}">-</view>
+              <input value="{{item.goods_number}}" bindchange="hangdleChange" bindinput="handleInput" class="num" data-id="{{item.goods_id}}" type="tel"></input>
+              <view class="add" bindtap="handleAdd" data-id="{{item.goods_id}}">+</view>
             </view>
           </view>
         </view>
@@ -43,8 +43,8 @@
     </view>
   </view>
   <view class="footed">
-    <view class="all-list">
-      <icon type="success" size="16"></icon>
+    <view class="all-list" bindtap="handleAllSelectedEvent">
+      <icon type="success" size="16" color="{{allSelected?'red':'gray'}}"></icon>
       <view>全选</view>
     </view>
     <view class="amount">

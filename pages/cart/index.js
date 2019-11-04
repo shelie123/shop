@@ -77,6 +77,11 @@ Page({
 
             // 由于showModel是异步执行，所以需要把修改data值的方式放到success中
 
+            // 判断对象是否是一个空对象
+            // if (Object.keys(goods).length === 0) {
+            //   goods = null;
+            // };
+
             // 修改data的值
             this.setData({
               goods
@@ -262,29 +267,40 @@ Page({
 
   // 提交订单
   handleSubmit() {
-    const {
-      priceAdd,
-      userInfo,
-      goods
-    } = this.data;
+    // const {
+    //   priceAdd,
+    //   userInfo,
+    //   goods
+    // } = this.data;
 
-    // 提取对象的value合并成数组
-    // const goodsArr=Object.keys(goods).map(v=>{
-    //   // 把数量赋值给goods_number,接口需要的
+    // // 提取对象的value合并成数组
+    // // const goodsArr=Object.keys(goods).map(v=>{
+    // //   // 把数量赋值给goods_number,接口需要的
+    // // })
+
+    // // 提交到订单
+    // request({
+    //   url: "/api/public/v1/my/orders/create",
+    //   method: "POST",
+    //   data: {
+    //     order_price: priceAdd,
+    //     consignee_addr: userInfo,
+    //     goods
+    //   }
+    // }).then(res => {
+    //   console.log(res)
     // })
 
-    // 提交到订单
-    request({
-      url: "/api/public/v1/my/orders/create",
-      method: "POST",
-      data: {
-        order_price: priceAdd,
-        consignee_addr: userInfo,
-        goods
-      }
-    }).then(res => {
-      console.log(res)
-    })
+    // 判断本地是否有token，有token就跳转到订单支付页，没有跳转到登录页
+    if (wx.getStorageSync("token")) {
+      wx.navigateTo({
+        url: "/pages/order_enter/index"
+      })
+    } else {
+      wx.navigateTo({
+        url: "/pages/auth/index"
+      })
+    }
 
   },
 

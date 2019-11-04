@@ -1,0 +1,8 @@
+/* pages/auth/index.wxss */
+
+.btn {
+  color: #fff;
+  background: #1aad19;
+  box-sizing: border-box;
+  margin: 30rpx 20rpx;
+}

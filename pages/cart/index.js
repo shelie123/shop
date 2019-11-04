@@ -8,7 +8,7 @@ Page({
   data: {
     goods: {},
     userInfo: wx.getStorageSync("address") || [],
-  // 总价格
+    // 总价格
     priceAdd: 0,
     // 是否全选
     allSelected: true
@@ -257,6 +257,34 @@ Page({
 
     // 计算总价格
     this.handlePriceAdd();
+
+  },
+
+  // 提交订单
+  handleSubmit() {
+    const {
+      priceAdd,
+      userInfo,
+      goods
+    } = this.data;
+
+    // 提取对象的value合并成数组
+    // const goodsArr=Object.keys(goods).map(v=>{
+    //   // 把数量赋值给goods_number,接口需要的
+    // })
+
+    // 提交到订单
+    request({
+      url: "/api/public/v1/my/orders/create",
+      method: "POST",
+      data: {
+        order_price: priceAdd,
+        consignee_addr: userInfo,
+        goods
+      }
+    }).then(res => {
+      console.log(res)
+    })
 
   },
 

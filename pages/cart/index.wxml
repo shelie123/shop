@@ -53,7 +53,7 @@
       </view>
       <view class="freight">包含运费</view>
     </view>
-    <view class="settle">
+    <view class="settle" bindtap="handleSubmit">
       结算
     </view>
   </view>

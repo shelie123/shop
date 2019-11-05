@@ -5,7 +5,7 @@
       <view>收货人:{{userInfo.userName}}</view>
       <view class="address-top-right">
         <view>{{userInfo.telNumber}}</view>
-        <view class="iconfont iconarrow-right"></view>
+        <view class="iconfont iconarrow-right" bindtap="handleAddress"></view>
       </view>
     </view>
     <view class="address-bottom">

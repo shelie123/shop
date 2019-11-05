@@ -18,19 +18,19 @@ page {
 }
 
 .top .photo {
-  width: 150rpx;
-  height: 150rpx;
-  background: #ddd;
+  width: 140rpx;
+  height: 140rpx;
   margin: 0 50rpx;
   border-radius: 50%;
   text-align: center;
   border: 3px #fff solid;
 }
 
-.top .photo image {
-  width: 150rpx;
-  height: 150rpx;
+.photo open-data {
+  width: 140rpx;
+  height: 140rpx;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .top .photo view {
@@ -140,11 +140,9 @@ page {
   border-bottom: 1px #ddd solid;
 }
 
-.customer view:nth-child(2){
+.customer view:nth-child(2) {
   padding-right: 10px;
 }
-
-
 
 /* .clearfix {
   overflow: hidden;

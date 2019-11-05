@@ -7,24 +7,44 @@ Page({
    */
   data: {
     goods: {},
-    userInfo: wx.getStorageSync("address") || [],
+    userInfo: wx.getStorageSync("address") || {},
     // 总价格
     priceAdd: 0,
     // 是否全选
     allSelected: true
   },
 
+  handleAddress() {
+    // 获取地址
+    wx.chooseAddress({
+      success(res) {
+        const {
+          userName,
+          telNumber,
+          provinceName,
+          cityName,
+          countyName,
+          detailInfo
+        } = res
+
+        var address = {
+          userName,
+          telNumber,
+          provinceName,
+          cityName,
+          countyName,
+          detailInfo
+        }
+        wx.setStorageSync('address', address)
+      },
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    // 获取地址
-    wx.chooseAddress({
-      success(res) {
-        wx.setStorageSync('address', res)
-      },
-    })
+
 
 
   },

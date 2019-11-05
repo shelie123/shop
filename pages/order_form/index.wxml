@@ -1,0 +1,22 @@
+<!--pages/order_form/index.wxml-->
+<view class="container">
+  <view class="top">
+    <view wx:for="{{['全部','待付款','已付款','退款/退货']}}" wx:key="{{index}}" data-index="{{index}}" bindtap="handleBtn" class="item {{current===index?'active':''}}">{{item}}</view>
+  </view>
+  <view class="content">
+    <view wx:if="{{current===0}}">
+      <view class="form-details">
+      
+      </view>
+    </view>
+    <view wx:if="{{current===1}}">
+      hahahhahahahahahhaha1
+    </view>
+    <view wx:if="{{current===2}}">
+      hahahhahahahahahhaha2
+    </view>
+    <view wx:if="{{current===3}}">
+      hahahhahahahahahhaha3
+    </view>
+  </view>
+</view>

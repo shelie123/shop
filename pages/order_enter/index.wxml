@@ -1,0 +1,49 @@
+<!--pages/order_enter/index.wxml-->
+
+<!--pages/cart/index.wxml-->
+<view class="container">
+  <view class="address">
+    <view class="address-top">
+      <view>收货人:{{address.userName}}</view>
+      <view class="address-top-right">
+        <view>{{address.telNumber}}</view>
+        <view class="iconfont iconarrow-right" bindtap="handleAddress"></view>
+      </view>
+    </view>
+    <view class="address-bottom">
+      收货地址：{{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}
+    </view>
+    <view class="foot">
+      <image src="../../images/cart_border@2x.png"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-list" wx:for="{{goods}}" wx:key="{{index}}" wx:if="{{item.selected}}">
+      <view class="list-details">
+        <navigator url="" class="picture">
+          <image src="{{item.goods_small_logo}}"></image>
+        </navigator>
+        <view class="list-top">
+          <navigator url="" class="title">
+            {{item.goods_name}}
+          </navigator>
+          <view class="list-bottom">
+            <view class="price">￥{{item.goods_price}}</view>
+            <view class="operation">
+              x {{item.goods_number}} 件
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="allprice">
+    总价格：
+    <text>{{allPrice}}</text> 元
+  </view>
+
+  <view class="btn">
+    <button type="primary" bindtap="handlePay">立即支付</button>
+  </view>
+
+</view>
